@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="design.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+    
+
+
+    <div class="input-section fancy-box">
+      <div class="input-icon">
+        <input type="text" id="task-input" placeholder="✏️ What is your todays Task..." />
+      </div>
+
+      <div class="select-icon">
+        <select id="task-category">
+          <option value="General" data-color="#6c757d">📝 General</option>
+          <option value="Work" data-color="#007bff">💼 Work</option>
+          <option value="Personal" data-color="#e83e8c">🏠 Personal</option>
+          <option value="Shopping" data-color="#ffc107">🛒 Shopping</option>
+          <option value="Study" data-color="#28a745">📚 Study</option>
+        </select>
+      </div>
+
+        <button onclick="addTask()">➕ Add Task</button>
+    </div>
+
+
+    <div class="filters">
+      <button onclick="setFilter('all')" id="filter-all" class="active">All</button>
+      <button onclick="setFilter('active')" id="filter-active">Active</button>
+      <button onclick="setFilter('completed')" id="filter-completed">Completed</button>
+    </div>
+
+    <ul id="task-list"></ul>
+
+    <div class="footer">
+      <span id="task-count">0 tasks</span>
+      <button onclick="clearCompleted()">Clear Completed</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
